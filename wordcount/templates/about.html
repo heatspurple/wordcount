@@ -1,5 +1,38 @@
-<h1>About</h1>
+<!doctype html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+        <title> 글자 세는 페이지 - 설명</title>
+        <meta name="viewport"
+        content="width=device-width,user-scalable=no">
+        <style>
+            /*css reset*/
+            body{
+                margin: 0;
+            }
+            
+            /*css*/
+            
+            body {
+                background-color: lightblue;
+                color: black;
+                text-align: center;
+            }
 
-<p>안녕하세요, 이곳은 글자를 세 주는 멋쟁이 사자처럼의 워드카운트 웹페이지입니다. 여기에서 글자를 세세요.</p>
+            p {
+                font-family: 'Gaegu', cursive;
+            } 
 
-<a href="{%url 'home'%}">Home으로 돌아가기</a>
+            
+        </style>
+
+    </head>
+    <body>
+        <h1 style=>About</h1>
+
+        <p>안녕하세요, 이곳은 글자를 세 주는 멋쟁이 사자처럼의 <br>워드카운트 웹페이지입니다. 여기에서 글자를 세세요.
+        <br> by Minsung</p>
+
+        <a href="{%url 'home'%}">Home으로 돌아가기</a>
+    </body>
+</html>

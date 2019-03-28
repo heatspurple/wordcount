@@ -1,9 +1,36 @@
-<h1>안녕하세요, 여기에서 열심히 글자를 세세요!</h1>
+<!doctype html>
+<html>
+    <head>
+        <title> 글자 세는 페이지</title>
+        <meta name="viewport"
+        content="width=device-width,user-scalable=no">
+        <style>
+            /*css reset*/
+            body{
+                margin: 0;
+            }
+            
+            /*css*/
+            
+            body {
+                background-color: lightblue;
+                color: black;
+                text-align: center;
+            }
+        </style>
 
-<a href="{%url 'about'%}">ABOUT</a>
+    </head>
+    <body>
+        
+        <br>
+        <h2>안녕하세요, 여기에서 글자세기 시작합니다!</h2>
 
-<form action="{%url 'result'%}">
-    <textarea cols="40" rows="10" name="fulltext"></textarea>
-    <br>
-    <input type="submit" value="Count!">
-</form>
+        <a href="{%url 'about'%}">ABOUT</a>
+        
+        <form action="{%url 'result'%}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br><br>
+        <input type="submit" value="Count!">
+        </form>
+</body>
+</html>
