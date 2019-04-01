@@ -1,0 +1,10 @@
+{% for blog in blogs.all%}
+    <h1> {{blog.title}} </h1>
+    <p> {{blog.pub_date}} </p>
+    <p> {{blog.body}} </p>
+    <br><br>
+{%endfor%}
+
+<!--blog는 view파일에서 Blog클래스안에있는 쿼리셋을 뜻함.
+그리고 쿼리셋 메소드.all을 통해 갖고옴
+그럼 blogs.all에 모든 블로그 글들이 담기는 것. for문을 이용해 하나하나 순회를 하면서 담길것.-->
