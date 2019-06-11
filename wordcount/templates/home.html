@@ -1,9 +1,5 @@
-<!doctype html>
-<html>
-    <head>
-        <title> 글자 세는 페이지</title>
-        <meta name="viewport"
-        content="width=device-width,user-scalable=no">
+{% extends 'base.html' %}
+{% block content %}
         <style>
             /*css reset*/
             body{
@@ -13,24 +9,27 @@
             /*css*/
             
             body {
+                font-family: 'Sunflower', sans-serif;
                 background-color: lightblue;
                 color: black;
                 text-align: center;
             }
         </style>
-
     </head>
     <body>
         
         <br>
-        <h2>안녕하세요, 여기에서 글자세기 시작합니다!</h2>
-
-        <a href="{%url 'about'%}">ABOUT</a>
-        
+        <h2>글자가 얼마인지 세주는 유용한 시스템!</h2>
+        <br>
         <form action="{%url 'result'%}">
-        <textarea cols="40" rows="10" name="fulltext"></textarea>
-        <br><br>
-        <input type="submit" value="Count!">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">글자를 입력하세요!</label>
+            <br>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="fulltext"></textarea>
+        </div>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Count!">
         </form>
 </body>
 </html>
+{% endblock %}

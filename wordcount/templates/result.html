@@ -1,6 +1,5 @@
-<!doctype html>
-<html>
-    <head>
+{% extends 'base.html' %}
+{% block content %}
         <title> 글자 세는 페이지 - 결과</title>
         <meta name="viewport"
         content="width=device-width,user-scalable=no">
@@ -13,28 +12,30 @@
             /*css*/
             
             body {
+                font-family: 'Sunflower', sans-serif;
                 background-color: lightblue;
                 color: black;
                 text-align: center;
             }
         </style>
-
     </head>
     <body>
-        <h2>당신이 입력한 텍스트는 {{total}}<!-- 총단어 수--> 로 구성되어 있습니다.</h2>
-
-        <a href = "{% url 'home' %}"> 다시 하기 </a>
+        <br><br>
+        <h2>당신이 입력한 텍스트는 <br>{{total}}<!-- 총단어 수--><br> 로 구성되어 있습니다.</h2>
         <br>
         <h2> 입력한 텍스트 : </h2>
         {{full}}
         <!--입력받은 전체 텍스트-->
-
+        <br>
         <h2> 단어 카운트 : </h2>
         {% for word, howmany in dictionary%}
         <!--'단어' - '단어가 나온 횟수' -->
 
         {{word}} : {{howmany}}
         <br>
-        {%endfor%}
+        {% endfor %}
+        <br>
+        <a href = "{% url 'home' %}"> 다시 하기 </a>
     </body>
 </html>
+{% endblock %}

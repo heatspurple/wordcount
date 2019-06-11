@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+
 <!doctype html>
 <html>
     <head>
@@ -28,11 +31,10 @@
 
     </head>
     <body>
-        <h1 style=>About</h1>
-
-        <p>안녕하세요, 이곳은 글자를 세 주는 멋쟁이 사자처럼의 <br>워드카운트 웹페이지입니다. 여기에서 글자를 세세요.
-        <br> by Minsung</p>
-
-        <a href="{%url 'home'%}">Home으로 돌아가기</a>
+        <h1>About</h1>
+        <br>
+        <h4>안녕하세요, 이곳은 글자를 세 주는 멋쟁이 사자처럼의 <br>워드카운트 웹페이지입니다. <br>글자를 세면 되요.
+        <br> by Minsung</h4>
     </body>
 </html>
+{% endblock %}
